@@ -31,40 +31,57 @@ Le data frame "BDD" contient 1309 observations avec 4 variables :
 summary(BDD)
 ```
 
+#Graphique pour la répartition des survivants en fonction du sexe avec des couleurs personnalisées
+
 ```{r}
 library(ggplot2)
-# Graphique pour la répartition des survivants en fonction du sexe
 ggplot(BDD, aes(x = sex, fill = survived)) +
   geom_bar(position = "dodge") +
   labs(title = "Répartition des survivants en fonction du sexe",
        x = "Sexe",
        y = "Nombre",
        fill = "Survie") +
+  scale_fill_manual(values = c("orange", "blue")) +
   theme_minimal()
+
 ```
 
-```{r}
+
+Interprétation : Le graphique montre que le nombre de non-survivants (en orange) est supérieur chez les hommes par rapport aux femmes. À l’inverse, le nombre de survivants (en bleu) est nettement plus élevé chez les femmes, soulignant une différence significative entre les sexes en termes de survie.
+
 #Graphique : Répartition des survivants en fonction de la classe
+
+```{r}
 ggplot(BDD, aes(x = passengerClass, fill = survived)) +
   geom_bar(position = "dodge") +
   labs(title = "Répartition des survivants en fonction de la classe",
        x = "Classe",
        y = "Nombre",
        fill = "Survie") +
+   scale_fill_manual(values = c("purple", "green")) +
   theme_minimal()
 ```
 
 
+Interprétation : Le graphique montre que les survivants (en vert) sont principalement issus de la première classe, tandis que les non-survivants (en violet) proviennent principalement de la troisième classe, ce qui indique une disparité liée au statut socio-économique
+
+#Représentation de l’age en fonction de la variable survived.
+
 ```{r}
-#Représentation l’age en fonction de la variable survived.
 ggplot(BDD, aes(x = as.factor(survived), y = age, fill = as.factor(survived))) +
   geom_boxplot() +
   labs(title = "Répartition de l'âge en fonction de la survie",
        x = "Survie (0 = Non, 1 = Oui)",
        y = "Âge",
        fill = "Survécu") +
+  scale_fill_manual(values = c("pink", "skyblue")) +
   theme_minimal()
 ```
+
+
+Interprétation :  Le graphique montre la répartition des survivants et des non-survivants selon l'âge, sans différence significative entre les groupes.
+
+
 
 
 
