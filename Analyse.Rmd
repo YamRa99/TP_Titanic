@@ -81,6 +81,16 @@ ggplot(BDD, aes(x = as.factor(survived), y = age, fill = as.factor(survived))) +
 
 Interprétation :  Le graphique montre la répartition des survivants et des non-survivants selon l'âge, sans différence significative entre les groupes.
 
+#Charger le Package
+
+```{r}
+library(TitanicPckg)
+# Utiliser les fonctions
+
+taux_survie_sex(BDD)
+taux_survie_class(BDD)
+
+```
 
 
 
