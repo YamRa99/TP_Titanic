@@ -428,11 +428,12 @@ classe, ce qui indique une disparité liée au statut socio-économique</p>
 <p>Interprétation : Le graphique montre la répartition des survivants et
 des non-survivants selon l’âge, sans différence significative entre les
 groupes.</p>
-<p>#Charger le Package</p>
+</div>
+<div id="chargement-du-package-titanicpckg" class="section level1">
+<h1>Chargement du package “TitanicPckg”</h1>
 <pre class="r"><code>library(TitanicPckg)
-# Utiliser les fonctions
 
-taux_survie_sex(BDD)</code></pre>
+taux_survie_class(BDD)</code></pre>
 <pre><code>## 
 ## Attachement du package : &#39;dplyr&#39;</code></pre>
 <pre><code>## Les objets suivants sont masqués depuis &#39;package:stats&#39;:
@@ -441,18 +442,18 @@ taux_survie_sex(BDD)</code></pre>
 <pre><code>## Les objets suivants sont masqués depuis &#39;package:base&#39;:
 ## 
 ##     intersect, setdiff, setequal, union</code></pre>
-<pre><code>## # A tibble: 2 × 2
-##   sex    TauxSurvie
-##   &lt;fct&gt;       &lt;dbl&gt;
-## 1 female      0.727
-## 2 male        0.191</code></pre>
-<pre class="r"><code>taux_survie_class(BDD)</code></pre>
 <pre><code>## # A tibble: 3 × 2
 ##   passengerClass TauxSurvie
 ##   &lt;fct&gt;               &lt;dbl&gt;
 ## 1 1st                 0.619
 ## 2 2nd                 0.430
 ## 3 3rd                 0.255</code></pre>
+<pre class="r"><code>taux_survie_sex(BDD)</code></pre>
+<pre><code>## # A tibble: 2 × 2
+##   sex    TauxSurvie
+##   &lt;fct&gt;       &lt;dbl&gt;
+## 1 female      0.727
+## 2 male        0.191</code></pre>
 </div>
 
 

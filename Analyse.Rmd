@@ -1,6 +1,8 @@
 ---
 title: "Analyse"
-output: html_document
+output:
+  html_document: default
+  pdf_document: default
 date: "2024-11-14"
 ---
 
@@ -78,20 +80,17 @@ ggplot(BDD, aes(x = as.factor(survived), y = age, fill = as.factor(survived))) +
   theme_minimal()
 ```
 
-
 Interprétation :  Le graphique montre la répartition des survivants et des non-survivants selon l'âge, sans différence significative entre les groupes.
 
-#Charger le Package
+# Chargement du package "TitanicPckg"
 
 ```{r}
 library(TitanicPckg)
-# Utiliser les fonctions
 
-taux_survie_sex(BDD)
 taux_survie_class(BDD)
 
+taux_survie_sex(BDD)
 ```
-
 
 
 
